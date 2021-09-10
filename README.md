@@ -1,3 +1,3 @@
 # incremental-game
 
-Simple incremental clicker game
+Simple incremental clicker web game created in vanilla javascript.
