@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Archive Room Demo</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2 id="title">Click click click click click</h2>
+    </header>
+
+    <div class="counters">
+      <p>You have:</p>
+      <p class="counter" id="point-counter">
+        <span class="point-count" id="point-count">0</span> points
+      </p>
+      <p class="counter hidden" id="autox-counter">
+        <span class="autox-count" id="autox-count">0</span>
+        autoclickers
+      </p>
+      <p class="counter hidden" id="autox2-counter">
+        <span class="autox2-count hidden" id="autox2-count">0</span>
+        autoclickers^2
+      </p>
+    </div>
+    <div class="clickers">
+      <button class="clicker" id="clicker">Click</button>
+    </div>
+    <div class="upgrades">
+      <button class="upgrade buy-autox hidden" id="buy-autox">
+        Buy autoclicker<br /><br />
+        <span id="autox-cost">10</span> points
+      </button>
+      <button class="upgrade buy-autox2 hidden" id="buy-autox2">
+        Buy autoclicker<br />
+        autoclicker<br />
+        <span id="autox2-cost">10</span> Autoclickers
+      </button>
+    </div>
+    <p class="log hidden" id="log">placeholder</p>
+    <script src="script.js"></script>
+  </body>
+</html>
