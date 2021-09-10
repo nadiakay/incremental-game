@@ -87,7 +87,7 @@ buyautox.addEventListener('click', e => {
 
 buyautox2.addEventListener('click', e => {
     if(autoxs < autox2Cost) {
-        logDisplay('You don\'t have enough autoxs');
+        logDisplay('You don\'t have enough autoclickers');
     } else {
         autoxs -= autox2Cost;
         autoxs2++;
