@@ -32,6 +32,7 @@ let autox2Cost = 10;
 let autox3Cost = 10;
 
 let Timer = window.setInterval(function() {Tick()}, 100);
+let gameWon = false;
 
 function Tick() {
     points += autoxs/10;
@@ -76,6 +77,7 @@ function logDisplay(text) {
 }
 
 function gameWon() {
+    gameWon = true;
     logDisplay('You won');
     title.innerHTML = 'Congratulations!';
 }
@@ -116,6 +118,6 @@ buyAutox3.addEventListener('click', e => {
         autoxs3++;
         autox3Cost = Math.floor(autox3Cost * scaleFactor);
         autox3CostDisplay.innerHTML = autox3Cost;
-        gameWon();
+        if(!gameWon) gameWon();
     }
 })
