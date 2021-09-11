@@ -51,16 +51,15 @@ function updateCounters() {
 
 //displays upgrade buttons once player has (upgrade cost/2)
 function updateUpgradeDisplays() {
-    if(points >= 5) {
-        buyAutox.classList.remove('hidden');
+    if(autoxs > 0) {
+        buyAutox2.classList.remove('hidden');
         autoxCounter.classList.remove('hidden');
     }
-    if(autoxs >= 5) {
-        buyAutox2.classList.remove('hidden');
+    if(autoxs2 > 0) {
+        buyAutox3.classList.remove('hidden');
         autox2Counter.classList.remove('hidden');
     }
-    if(autoxs2 >= 5) {
-        buyAutox3.classList.remove('hidden');
+    if(autoxs3 > 0) {
         autox3Counter.classList.remove('hidden');
     }
 }
@@ -76,7 +75,7 @@ function logDisplay(text) {
     }, 3000);
 }
 
-function gameWon() {
+function winGame() {
     gameWon = true;
     logDisplay('You won');
     title.innerHTML = 'Congratulations!';
@@ -118,6 +117,6 @@ buyAutox3.addEventListener('click', e => {
         autoxs3++;
         autox3Cost = Math.floor(autox3Cost * scaleFactor);
         autox3CostDisplay.innerHTML = autox3Cost;
-        if(!gameWon) gameWon();
+        if(!gameWon) winGame();
     }
 })
